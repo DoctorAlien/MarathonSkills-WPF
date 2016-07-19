@@ -1,0 +1,28 @@
+﻿<sjj:Master x:Class="Marathon.RunnerMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      xmlns:sjj="clr-namespace:Marathon" Style="{StaticResource Master}"
+      d:DesignHeight="555" d:DesignWidth="666"
+	Title="RunnerMenu">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="150*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Runner Menu" VerticalAlignment="Top" Margin="0,10,0,0" FontWeight="Bold" FontSize="22"/>
+        <StackPanel HorizontalAlignment="Left" Height="341" VerticalAlignment="Top" Width="200" Margin="120,0,0,0" Grid.Row="1">
+            <Button Content="Register for an event" Height="50" Margin="0,0,0,30" FontStyle="Italic" FontSize="18"/>
+            <Button Content="Edit runner profile" Height="50" Margin="0,0,0,30" FontStyle="Italic" FontSize="18"/>
+            <Button Content="Contact information" Height="50" Margin="0,0,0,30" FontStyle="Italic" FontSize="18"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="341" VerticalAlignment="Top" Width="200" Margin="340,0,0,0" Grid.Row="1">
+            <Button Content="My race results" Height="50" Margin="0,0,0,30" FontStyle="Italic" FontSize="18"/>
+            <Button Content="My sponsorship" Height="50" Margin="0,0,0,30" FontStyle="Italic" FontSize="18"/>
+            <Button Content="My training program" Height="50" Margin="0,0,0,30" FontStyle="Italic" FontSize="18"/>
+        </StackPanel>
+    </Grid>
+</sjj:Master>

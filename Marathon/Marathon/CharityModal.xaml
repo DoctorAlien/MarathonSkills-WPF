@@ -1,0 +1,16 @@
+﻿<Window x:Class="Marathon.CharityModal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CharityModal" Height="300" Width="300" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Name of the Charity" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="22" FontWeight="Bold" Width="213"/>
+        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="93,44,0,0">
+            <Image.Source>
+                <BitmapImage UriSource="Image/circle.png"/>
+            </Image.Source>
+        </Image>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="This would be the long description of the charity.It could go for a few paragraphs." VerticalAlignment="Top" Margin="10,160,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="This is more of the description down here,and this is some more of the description also." VerticalAlignment="Top" Margin="10,215,0,0"/>
+
+    </Grid>
+</Window>

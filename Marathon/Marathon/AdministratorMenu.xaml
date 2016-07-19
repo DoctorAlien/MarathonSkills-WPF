@@ -1,0 +1,23 @@
+﻿<sjj:Master x:Class="Marathon.AdministratorMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      xmlns:sjj="clr-namespace:Marathon" Style="{StaticResource Master}"
+      d:DesignHeight="555" d:DesignWidth="666"
+	Title="AdministratorMenu">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="150*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Administrator menu" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="22" FontWeight="Bold"/>
+        <StackPanel HorizontalAlignment="Center" Width="232" Margin="184,0" Grid.Row="1">
+            <Button Content="Charities" Height="60" Margin="0,25,0,5" FontStyle="Italic" FontSize="18"/>
+            <Button Content="Users" Height="60" Margin="0,25,0,5" FontStyle="Italic" FontSize="18"/>
+            <Button Content="Valunteers" Height="60" Margin="0,25,0,5" FontStyle="Italic" FontSize="18"/>
+        </StackPanel>
+    </Grid>
+</sjj:Master>
