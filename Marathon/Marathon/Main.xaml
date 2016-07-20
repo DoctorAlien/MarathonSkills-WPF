@@ -20,7 +20,7 @@
         </Grid>
         <Grid Grid.Row="2" Background="#FF818181"/>
         <StackPanel HorizontalAlignment="Center" Height="349" VerticalAlignment="Top" Margin="0" Grid.Row="1" Width="260">
-            <Button Content="I want to be a runner" Height="65" Margin="0,25,0,5"/>
+            <Button x:Name="btnRegister" Content="I want to be a runner" Height="65" Margin="0,25,0,5" Click="btnRegister_Click"/>
             <Button x:Name="btnSponsor" Content="I want sponsor a runner" Height="65" Margin="0,25,0,5" Click="btnSponsor_Click"/>
             <Button x:Name="btnFindMore" Content="I want to find out more" Height="65" Margin="0,25,0,5" Click="btnFindMore_Click"/>
         </StackPanel>

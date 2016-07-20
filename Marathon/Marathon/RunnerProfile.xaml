@@ -1,0 +1,58 @@
+﻿<sjj:Master x:Class="Marathon.RunnerProfile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="555" d:DesignWidth="666"
+      xmlns:sjj="clr-namespace:Marathon" Style="{StaticResource Master}"
+	Title="RunnerProfile">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="333*"/>
+            <ColumnDefinition Width="333*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="72*"/>
+            <RowDefinition Height="383*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Edit runner profile" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" Height="29" Width="190" />
+        <TextBlock HorizontalAlignment="Left" Margin="55,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" Height="16" Width="31"/>
+        <TextBlock HorizontalAlignment="Left" Margin="46,49,0,0" Grid.Row="1" TextWrapping="Wrap" Text="First Name:" VerticalAlignment="Top" Height="16" Width="60"/>
+        <TextBlock HorizontalAlignment="Left" Margin="47,85,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Last Name:" VerticalAlignment="Top" Height="16" Width="59"/>
+        <TextBlock HorizontalAlignment="Left" Margin="64,122,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Gender:" VerticalAlignment="Top" Height="16" Width="41"/>
+        <TextBlock HorizontalAlignment="Left" Margin="35,157,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Date of Birth:" VerticalAlignment="Top" Height="16" Width="70"/>
+        <TextBlock HorizontalAlignment="Left" Margin="63,189,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Country" VerticalAlignment="Top" Height="16" Width="42"/>
+        <TextBlock HorizontalAlignment="Left" Margin="65,222,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Charity:" VerticalAlignment="Top" Height="16" Width="40"/>
+        <TextBlock HorizontalAlignment="Left" Margin="26,254,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Target to raise:" VerticalAlignment="Top" Height="16" Width="79"/>
+        <TextBlock HorizontalAlignment="Left" Margin="120,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="the.email@address.com" VerticalAlignment="Top" Height="16" Width="126"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Margin="120,48,0,0" Grid.Row="1" Style="{StaticResource placeholder}" Tag="First name"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Margin="120,84,0,0" Grid.Row="1" Style="{StaticResource placeholder}" Tag="Last name"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Margin="120,253,0,0" Grid.Row="1" Style="{StaticResource placeholder}" Tag="$500"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Margin="120,122,0,0" Grid.Row="1" Height="22"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Margin="120,189,0,0" Grid.Row="1" Height="22"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Margin="120,222,0,0" Grid.Row="1" Height="22"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Change password" VerticalAlignment="Top" FontSize="16" Height="21" Width="148"/>
+        <TextBlock HorizontalAlignment="Left" Margin="57,85,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Grid.Column="1" Height="16" Width="53"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,122,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Password Again:" VerticalAlignment="Top" Grid.Column="1" Height="16" Width="90"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,157,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Race Kit Option:" VerticalAlignment="Top" Grid.Column="1" Height="16" Width="90"/>
+        <TextBlock HorizontalAlignment="Left" Margin="42,192,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Race Events:" VerticalAlignment="Top" Grid.Column="1" Height="16" Width="68"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Margin="128,84,0,0" Grid.Row="1" Style="{StaticResource ResourceKey=placeholder}" Tag="Password" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Margin="128,121,0,0" Grid.Row="1" Style="{StaticResource ResourceKey=placeholder}" Tag="Re-enter password" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="128,157,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Option B" VerticalAlignment="Top" Grid.Column="1" Height="16" Width="47"/>
+        <TextBlock xml:space="preserve" HorizontalAlignment="Left" Margin="89,176,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Height="64" Width="152">
+            Fun Run
+            21km Half Marathon
+        </TextBlock>
+        <TextBlock xml:space="preserve" HorizontalAlignment="Center" Margin="89,225,91,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" TextAlignment="Center" Height="80" Width="153">
+            Registration status:
+            Registered
+            Payment Confirmend
+        </TextBlock>
+        <Button Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="220,311,0,0" Grid.Row="1" Height="20"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="20,311,0,0" Grid.Row="1" Grid.Column="1" Height="20"/>
+        <DatePicker HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,153,0,0" Grid.Row="1" Width="175"/>
+
+    </Grid>
+</sjj:Master>

@@ -24,5 +24,10 @@ namespace Marathon
         {
             InitializeComponent();
         }
+
+        private void btnBMICalculator_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new BMICalculator());
+        }
     }
 }

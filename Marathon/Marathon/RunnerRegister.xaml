@@ -1,0 +1,38 @@
+﻿<sjj:Master x:Class="Marathon.RunnerRegister"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="555" d:DesignWidth="666"
+      xmlns:sjj="clr-namespace:Marathon" Style="{StaticResource Master}"
+	Title="RunnerRegister">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="150*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Register as a runner" VerticalAlignment="Top" Margin="0,10,0,0" FontWeight="Bold" FontSize="22"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Please fill out all of the following information to be registered as a runner" VerticalAlignment="Top" Margin="0,70,0,0" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" Margin="116,35,0,0" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Margin="94,70,0,0" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Password Again:" VerticalAlignment="Top" Margin="60,105,0,0" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="First Name:" VerticalAlignment="Top" Margin="87,148,0,0" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Last Name:" VerticalAlignment="Top" Margin="88,195,0,0" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Gender:" VerticalAlignment="Top" Margin="372,38,0,0" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Date of Birth:" VerticalAlignment="Top" Margin="344,73,0,0" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Country:" VerticalAlignment="Top" Margin="369,105,0,0" Grid.Row="1"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Margin="167,34,0,0" Grid.Row="1" Style="{StaticResource placeholder}" Tag="Email address"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Margin="167,69,0,0" Grid.Row="1" Style="{StaticResource placeholder}" Tag="Password"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Margin="167,104,0,0" Grid.Row="1" Style="{StaticResource placeholder}" Tag="Re-enter password"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Margin="167,147,0,0" Grid.Row="1" Style="{StaticResource placeholder}" Tag="First name"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Margin="167,194,0,0" Grid.Row="1" Style="{StaticResource placeholder}" Tag="Last name"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Margin="434,69,0,0" Grid.Row="1" Style="{StaticResource placeholder}" Tag="1978-07-16"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="157" Margin="434,34,0,0" Grid.Row="1"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="157" Margin="434,104,0,0" Grid.Row="1"/>
+        <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="249,268,0,0" Grid.Row="1" Click="btnRegister_Click"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="360,268,0,0" Grid.Row="1"/>
+
+    </Grid>
+</sjj:Master>

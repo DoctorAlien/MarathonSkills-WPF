@@ -1,0 +1,15 @@
+﻿<sjj:Master x:Class="Marathon.TrainingProgramResult"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="555" d:DesignWidth="666"
+      xmlns:sjj="clr-namespace:Marathon" Style="{StaticResource Master}"
+	Title="TrainingProgramResult">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Thank you fro selecting your training programs!" FontSize="22" FontWeight="Bold" VerticalAlignment="Top" Margin="0,10,0,0"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="You had selected 2 training programs!" VerticalAlignment="Top" FontSize="16" Margin="0,50,0,0"></TextBlock>
+    </Grid>
+</sjj:Master>

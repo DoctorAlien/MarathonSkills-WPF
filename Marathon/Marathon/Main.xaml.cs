@@ -39,5 +39,10 @@ namespace Marathon
         {
             this.NavigationService.Navigate(new SponsorRunner());
         }
+
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new RunnerRegister());
+        }
     }
 }

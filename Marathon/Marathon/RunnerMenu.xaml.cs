@@ -25,5 +25,15 @@ namespace Marathon
             InitializeComponent();
             IsShowLogoutBtn = true;
         }
+
+        private void btnRegisterEvent_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new EventRegister());
+        }
+
+        private void btnRunnerProfile_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new RunnerProfile());
+        }
     }
 }

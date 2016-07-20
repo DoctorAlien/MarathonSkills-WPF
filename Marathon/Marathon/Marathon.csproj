@@ -56,11 +56,20 @@
     <Compile Include="AdministratorMenu.xaml.cs">
       <DependentUpon>AdministratorMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BMICalculator.xaml.cs">
+      <DependentUpon>BMICalculator.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CharityModal.xaml.cs">
       <DependentUpon>CharityModal.xaml</DependentUpon>
     </Compile>
     <Compile Include="CoordinatorMenu.xaml.cs">
       <DependentUpon>CoordinatorMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditCharity.xaml.cs">
+      <DependentUpon>EditCharity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventRegister.xaml.cs">
+      <DependentUpon>EventRegister.xaml</DependentUpon>
     </Compile>
     <Compile Include="FindMore.xaml.cs">
       <DependentUpon>FindMore.xaml</DependentUpon>
@@ -68,9 +77,33 @@
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ManageCharity.xaml.cs">
+      <DependentUpon>ManageCharity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageRunner.xaml.cs">
+      <DependentUpon>ManageRunner.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Master.cs" />
+    <Compile Include="MySponsorship.xaml.cs">
+      <DependentUpon>MySponsorship.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RaceResult.xaml.cs">
+      <DependentUpon>RaceResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RunnerManagement.xaml.cs">
+      <DependentUpon>RunnerManagement.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RunnerMenu.xaml.cs">
       <DependentUpon>RunnerMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RunnerProfile.xaml.cs">
+      <DependentUpon>RunnerProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RunnerRegister.xaml.cs">
+      <DependentUpon>RunnerRegister.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RunnerRegistrationConfirm.xaml.cs">
+      <DependentUpon>RunnerRegistrationConfirm.xaml</DependentUpon>
     </Compile>
     <Compile Include="SponsorRunner.xaml.cs">
       <DependentUpon>SponsorRunner.xaml</DependentUpon>
@@ -78,7 +111,17 @@
     <Compile Include="test.xaml.cs">
       <DependentUpon>test.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TrainingProgram.xaml.cs">
+      <DependentUpon>TrainingProgram.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TrainingProgramResult.xaml.cs">
+      <DependentUpon>TrainingProgramResult.xaml</DependentUpon>
+    </Compile>
     <Page Include="AdministratorMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BMICalculator.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -87,6 +130,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CoordinatorMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditCharity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EventRegister.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -117,11 +168,43 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ManageCharity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageRunner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MySponsorship.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RaceResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resource.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="RunnerManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RunnerMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RunnerProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RunnerRegister.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RunnerRegistrationConfirm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -130,6 +213,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="test.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TrainingProgram.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TrainingProgramResult.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

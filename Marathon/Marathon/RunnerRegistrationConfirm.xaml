@@ -1,0 +1,18 @@
+﻿<sjj:Master x:Class="Marathon.RunnerRegistrationConfirm"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="555" d:DesignWidth="666"
+      xmlns:sjj="clr-namespace:Marathon" Style="{StaticResource Master}"
+	Title="RunnerRegistrationConfirm">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Thank you for registering as a runner!" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="22" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Thank you for registering as a runner in Marathon Skills 2016" VerticalAlignment="Top" Margin="0,81,0,0"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,134,0,0"><Run Text="You will be contacted soon about payment"/></TextBlock>
+        <Button x:Name="btnOK" Content="OK" HorizontalAlignment="Center" VerticalAlignment="Top" Width="75" Margin="0,213,0,0" Click="btnOK_Click"/>
+
+    </Grid>
+</sjj:Master>

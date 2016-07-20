@@ -17,7 +17,7 @@
         <StackPanel HorizontalAlignment="Center" Width="232" Margin="184,0" Grid.Row="1">
             <Button Content="Marathon Skill 2016 map" Height="60" Margin="0,25,0,5" FontStyle="Italic" FontSize="18"/>
             <Button Content="Previous race results" Height="60" Margin="0,25,0,5" FontStyle="Italic" FontSize="18"/>
-            <Button Content="BMI Calculator" Height="60" Margin="0,25,0,5" FontStyle="Italic" FontSize="18"/>
+            <Button x:Name="btnBMICalculator" Content="BMI Calculator" Height="60" Margin="0,25,0,5" FontStyle="Italic" FontSize="18" Click="btnBMICalculator_Click"/>
         </StackPanel>
 
     </Grid>

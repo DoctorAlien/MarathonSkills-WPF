@@ -1,0 +1,26 @@
+﻿<sjj:Master x:Class="Marathon.RunnerManagement"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="555" d:DesignWidth="666"
+      xmlns:sjj="clr-namespace:Marathon" Style="{StaticResource Master}"
+	Title="RunnerManagement">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" FontSize="22" FontWeight="Bold" TextWrapping="Wrap" Text="Runner management" VerticalAlignment="Top" Margin="0,10,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Sort and filter" FontSize="16" FontWeight="Bold" VerticalAlignment="Top" Margin="109,62,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Export" FontSize="16" FontWeight="Bold" VerticalAlignment="Top" Margin="510,62,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Status:" VerticalAlignment="Top" Margin="93,113,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Race event:" VerticalAlignment="Top" Margin="68,147,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Sort by:" VerticalAlignment="Top" Margin="88,184,0,0"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="151,107,0,0"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="151,141,0,0"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="151,178,0,0"/>
+        <Button Content="Refresh" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="303,178,0,0"/>
+        <Button Content="Runner details(CSV)" HorizontalAlignment="Left" VerticalAlignment="Top" Width="149" Margin="460,107,0,0" Height="22"/>
+        <Button Content="Email address list" HorizontalAlignment="Left" VerticalAlignment="Top" Width="149" Margin="460,141,0,0" Height="22"/>
+
+    </Grid>
+</sjj:Master>
