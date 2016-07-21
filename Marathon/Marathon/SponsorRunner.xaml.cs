@@ -30,5 +30,19 @@ namespace Marathon
             var form = new CharityModal();
             form.ShowDialog();
         }
+
+        private void btnMinus_Click(object sender, RoutedEventArgs e)
+        {
+            if (int.Parse(txtDonate.Text)>=10)
+            {
+                txtDonate.Text = (int.Parse(txtDonate.Text) - 10).ToString();
+            }
+            
+        }
+
+        private void btnPlus_Click(object sender, RoutedEventArgs e)
+        {
+            txtDonate.Text = (int.Parse(txtDonate.Text) + 10).ToString();
+        }
     }
 }

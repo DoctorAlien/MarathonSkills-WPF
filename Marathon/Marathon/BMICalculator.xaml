@@ -26,10 +26,15 @@
         <Button x:Name="btnCalculate" Content="Calculate" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="40,347,0,0" Click="btnCalculate_Click"/>
         <Button Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="150,347,0,0"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="223" Stroke="Black" VerticalAlignment="Top" Width="162" Margin="0,74,0,0" Grid.Column="1"/>
-        <Canvas Grid.Column="1" Margin="46.2,326,46.6,90" Width="304">
-            <Polygon Points="0,0,30,0,15,20" Fill="LightGray" Canvas.Left="9"></Polygon>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Bmi}" VerticalAlignment="Top" Grid.Column="1" Margin="186,305,0,0"/>
+        <Canvas Grid.Column="1" Margin="10,326,10,90" Width="300">
+            <Polygon Points="0,0,30,0,15,20" Fill="LightGray" Canvas.Left="{Binding Left}"></Polygon>
+            <Polygon Points="0,20,75,20,75,40,0,40" Fill="Yellow"></Polygon>
+            <Polygon Points="75,20,150,20,150,40,75,40" Fill="LightGreen"></Polygon>
+            <Polygon Points="150,20,225,20,225,40,150,40" Fill="Yellow"></Polygon>
+            <Polygon Points="225,20,300,20,300,40,225,40" Fill="Red"></Polygon>
         </Canvas>
-        <Grid Grid.Column="1" HorizontalAlignment="Center" Height="20" Margin="0,347,0,0" VerticalAlignment="Top" Width="304">
+        <!--<Grid Grid.Column="1" HorizontalAlignment="Center" Height="20" Margin="0,347,0,0" VerticalAlignment="Top" Width="304">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="25*"></ColumnDefinition>
                 <ColumnDefinition Width="25*"></ColumnDefinition>
@@ -40,7 +45,7 @@
             <Grid HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="76" Background="#FFF5EE59" Grid.Column="2"/>
             <Grid HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="76" Background="#FF99F559" Grid.Column="1"/>
             <Grid HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="76" Background="#FFF55959" Grid.Column="3"/>
-        </Grid>
+        </Grid>-->
         <Grid Grid.Column="1" HorizontalAlignment="Center" Height="20" Margin="47,372,46,0" VerticalAlignment="Top" Width="304">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="25*"/>
@@ -53,6 +58,7 @@
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Healthy" VerticalAlignment="Top" Grid.Column="1" Margin="123,372,0,0" Height="20" Width="76" TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Overweight" VerticalAlignment="Top" Grid.Column="1" Margin="199,372,0,0" Height="20" Width="76" TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Obese" VerticalAlignment="Top" Grid.Column="1" Margin="275,372,0,0" Height="20" Width="76" TextAlignment="Center"/>
+        
 
     </Grid>
 </sjj:Master>

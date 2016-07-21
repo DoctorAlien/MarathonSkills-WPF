@@ -38,11 +38,11 @@
         <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="220" Grid.Column="1" Margin="10,48,0,0" Grid.Row="2" Height="22"/>
         <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Save The Cats Fund" VerticalAlignment="Top" Grid.Column="2" Margin="0,13,0,0" Grid.Row="2" FontSize="16"/>
         <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Amount to donate" VerticalAlignment="Center" Grid.Column="2" Margin="0,67,0,209" Grid.Row="2" FontSize="18" FontWeight="Bold" Height="24" Width="165"/>
-        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="$50" VerticalAlignment="Top" Grid.Column="2" Margin="0,102,0,0" Grid.Row="2" FontSize="48" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding ElementName=txtDonate,Path=Text}" VerticalAlignment="Top" Grid.Column="2" Margin="0,102,0,0" Grid.Row="2" FontSize="48" FontWeight="Bold"/>
         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Height="25" VerticalAlignment="Top" Width="182" Grid.Column="2" Margin="0,181,0,0" Grid.Row="2" >
-            <Button Content="-" HorizontalAlignment="Left" Width="30"/>
-            <TextBox TextWrapping="Wrap" Text="50" Width="120" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-            <Button Content="+" HorizontalAlignment="Left" Width="30"/>
+            <Button x:Name="btnMinus" Content="-" HorizontalAlignment="Left" Width="30" Click="btnMinus_Click"/>
+            <TextBox x:Name="txtDonate" TextWrapping="Wrap" Text="50" Width="120" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Button x:Name="btnPlus" Content="+" HorizontalAlignment="Left" Width="30" Click="btnPlus_Click"/>
         </StackPanel>
         <Button Content="Pay now" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Grid.Column="2" Margin="40,237,0,0" Grid.Row="2" Height="30"/>
         <Button Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Grid.Column="2" Margin="155,237,0,0" Grid.Row="2" Height="30"/>
