@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,21 +25,54 @@ namespace Marathon
         {
             InitializeComponent();
         }
+        SqlHelper db = new SqlHelper();
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (txtEmail.Text=="runner")
+            string role="";
+            string sqlString = "select * from [User] where Email =@email and Password=@password";
+            SqlParameter[] values = new SqlParameter[]{
+            new SqlParameter("@email",txtEmail.Text.Trim()),
+            new SqlParameter("@password",txtPassword.Text.Trim())
+            };
+            if (db.IsExist(sqlString, values))
             {
-                this.NavigationService.Navigate(new RunnerMenu());
+                //string sqlStringGetRole = "select RoleId from [User] Email =@email and Password=@password";
+                SqlParameter[] values1 = new SqlParameter[]{
+                new SqlParameter("@email",txtEmail.Text.Trim()),
+                new SqlParameter("@password",txtPassword.Text.Trim())
+                };
+                var sdr=db.GetDataReader(sqlString, values1);
+                if (sdr.HasRows)
+                {
+                    if (sdr.Read())
+                    {
+                        role = sdr["RoleId"].ToString();   
+                    }
+                } sdr.Close();
+                switch (role)
+                {
+                    case "R": this.NavigationService.Navigate(new RunnerMenu()); break;
+                    case "C": this.NavigationService.Navigate(new CoordinatorMenu()); break;
+                    case "A": this.NavigationService.Navigate(new AdministratorMenu()); break;
+                }
             }
-            else if (txtEmail.Text=="coordinator")
+            else
             {
-                this.NavigationService.Navigate(new CoordinatorMenu());
+                MessageBox.Show("Error");
             }
-            else if (txtEmail.Text=="admin")
-            {
-                this.NavigationService.Navigate(new AdministratorMenu());
-            }
+            //if (txtEmail.Text=="runner")
+            //{
+            //    this.NavigationService.Navigate(new RunnerMenu());
+            //}
+            //else if (txtEmail.Text=="coordinator")
+            //{
+            //    this.NavigationService.Navigate(new CoordinatorMenu());
+            //}
+            //else if (txtEmail.Text=="admin")
+            //{
+            //    this.NavigationService.Navigate(new AdministratorMenu());
+            //}
             
         }
     }

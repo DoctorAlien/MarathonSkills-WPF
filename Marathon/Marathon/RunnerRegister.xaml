@@ -23,16 +23,16 @@
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Gender:" VerticalAlignment="Top" Margin="372,38,0,0" Grid.Row="1"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Date of Birth:" VerticalAlignment="Top" Margin="344,73,0,0" Grid.Row="1"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Country:" VerticalAlignment="Top" Margin="369,105,0,0" Grid.Row="1"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Margin="167,34,0,0" Grid.Row="1" Style="{StaticResource placeholder}" Tag="Email address"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Margin="167,69,0,0" Grid.Row="1" Style="{StaticResource placeholder}" Tag="Password"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Margin="167,34,0,0" Grid.Row="1" Style="{StaticResource placeholder}" Tag="Email address"/>
+        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Margin="167,69,0,0" Grid.Row="1" Style="{StaticResource placeholder}" Tag="Password"/>
         <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Margin="167,104,0,0" Grid.Row="1" Style="{StaticResource placeholder}" Tag="Re-enter password"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Margin="167,147,0,0" Grid.Row="1" Style="{StaticResource placeholder}" Tag="First name"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Margin="167,194,0,0" Grid.Row="1" Style="{StaticResource placeholder}" Tag="Last name"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Margin="434,69,0,0" Grid.Row="1" Style="{StaticResource placeholder}" Tag="1978-07-16"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="157" Margin="434,34,0,0" Grid.Row="1"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="157" Margin="434,104,0,0" Grid.Row="1"/>
+        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Margin="167,147,0,0" Grid.Row="1" Style="{StaticResource placeholder}" Tag="First name"/>
+        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Margin="167,194,0,0" Grid.Row="1" Style="{StaticResource placeholder}" Tag="Last name"/>
+        <ComboBox x:Name="cmbGender" HorizontalAlignment="Left" VerticalAlignment="Top" Width="157" Margin="434,34,0,0" Grid.Row="1"/>
+        <ComboBox x:Name="cmbCountry" HorizontalAlignment="Left" VerticalAlignment="Top" Width="157" Margin="434,104,0,0" Grid.Row="1"/>
         <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="249,268,0,0" Grid.Row="1" Click="btnRegister_Click"/>
         <Button Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="360,268,0,0" Grid.Row="1"/>
+        <DatePicker x:Name="dpBirth" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="434,68.4,0,0" Grid.Row="1" Width="157"/>
 
     </Grid>
 </sjj:Master>
