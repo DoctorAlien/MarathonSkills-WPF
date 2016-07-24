@@ -6,7 +6,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="555" d:DesignWidth="666"
       xmlns:sjj="clr-namespace:Marathon" Style="{StaticResource Master}"
-	Title="EventRegister">
+	Title="EventRegister" Loaded="Master_Loaded">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -22,12 +22,9 @@
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Please fill out all folowing information to register for events in the Skills Marathon 2016 being held in Sao Paulo,Brazil.You will be contacted after you have registered to organise payment and other details" VerticalAlignment="Top" Margin="10,58,0,0" Grid.ColumnSpan="2"/>
         <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Competition events" VerticalAlignment="Top" Margin="0,10,0,0" Grid.Row="1" FontSize="18" FontWeight="Bold" Width="179"/>
         <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Race kit options" VerticalAlignment="Top" Margin="0,10,0,0" Grid.Row="1" FontSize="18" FontWeight="Bold" Grid.Column="1" Width="148"/>
-        <CheckBox Content="42km Full marathon($145)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="76,61,0,0" Grid.Row="1"/>
-        <CheckBox Content="21km Half marathon($75)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="76,81,0,0" Grid.Row="1"/>
-        <CheckBox Content="5km Fun run($20)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="76,101,0,0" Grid.Row="1"/>
-        <RadioButton Content="Option A($0):Runner's bib+RFID bracelet" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="49,49,0,0" Grid.Row="1"/>
-        <RadioButton Content="Option B($20):&#xD;&#xA;Option A+hat+water bottle" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="49,69,0,0" Grid.Row="1"/>
-        <RadioButton Content="Option C($45):&#xD;&#xA;Option B+t-shirt+souvenir booklet" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="49,105,0,0" Grid.Row="1"/>
+        <CheckBox x:Name="cbFullMarathon" Content="42km Full marathon($145)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="76,61,0,0" Grid.Row="1" Tag="145" Click="cbFullMarathon_Click"/>
+        <CheckBox x:Name="cbHalfMarathon" Content="21km Half marathon($75)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="76,81,0,0" Grid.Row="1" Tag="75" Click="cbHalfMarathon_Click"/>
+        <CheckBox x:Name="cbFunRun" Content="5km Fun run($20)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="76,101,0,0" Grid.Row="1" Tag="20" Click="cbFunRun_Click"/>
         <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Sponsorship details" VerticalAlignment="Top" Margin="0,10,0,0" Grid.Row="2" FontSize="18" FontWeight="Bold" Width="203"/>
         <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Registration cost" VerticalAlignment="Top" Margin="77,10,75,0" Grid.Row="2" FontSize="18" FontWeight="Bold" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Charity:" VerticalAlignment="Top" Margin="58,54,0,0" Grid.Row="2"/>
@@ -36,8 +33,32 @@
         <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Margin="115,90,0,0" Grid.Row="2" Style="{StaticResource placeholder}" Tag="$500"/>
         <Button Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="58,141,0,0" Grid.Row="2"/>
         <Button Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="160,141,0,0" Grid.Row="2"/>
-        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="$185" VerticalAlignment="Top" Grid.Column="1" Margin="0,53,0,0" Grid.Row="2" FontSize="72" FontWeight="Bold"/>
+        <TextBlock x:Name="tbTotal" HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding sum,Mode=OneWay}" VerticalAlignment="Top" Grid.Column="1" Margin="0,53,0,0" Grid.Row="2" FontSize="72" FontWeight="Bold"/>
         <Button x:Name="btnModal" Content="i" HorizontalAlignment="Left" VerticalAlignment="Top" Width="21" Margin="295,53,0,0" Grid.Row="2" Click="btnModal_Click"/>
+        <ListBox x:Name="lbxRaceKitOption" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="250" Grid.Column="1" Margin="10,39,0,0" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListBox.ItemTemplate>
+            <DataTemplate>
+                    <!--<RadioButton Content="{Binding raceKitOption}" Height="100" Width="100"/>-->
+                    
+                        <RadioButton HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="raceKitOptions" Checked="RadioButton_Checked" Tag="{Binding Cost,StringFormat=0}">
+                            <TextBlock Text="Option" FontWeight="Bold">
+                            <TextBlock Text="{Binding RaceKitOptionId}" FontWeight="Bold" Width="150">
+                                <TextBlock Text="("></TextBlock>
+                                <TextBlock Text="$"></TextBlock>
+                                <TextBlock Text="{Binding Cost,StringFormat=0}"></TextBlock>
+                                <TextBlock Text="):"></TextBlock>  
+                                <TextBlock Text="{Binding RaceKitOption}" FontWeight="Normal" TextWrapping="Wrap"></TextBlock>
+                             
+                            </TextBlock>
+                        </TextBlock>
+                    </RadioButton>
+                    
+                    
+                    
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        
 
     </Grid>
 </sjj:Master>
